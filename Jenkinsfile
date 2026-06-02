@@ -12,11 +12,13 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                bat 'mvn clean compile'
-            }
+       stage('Build') {
+    steps {
+        dir('my-backend-app') {
+            bat 'mvn clean compile'
         }
+    }
+}
 
         stage('Test') {
             steps {
