@@ -14,9 +14,9 @@ pipeline {
 
        stage('Build') {
     steps {
-        dir('main') {
+        // dir('main') {
             bat 'mvn clean compile'
-        }
+        
     }
 }
 
