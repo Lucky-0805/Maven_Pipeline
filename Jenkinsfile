@@ -14,7 +14,7 @@ pipeline {
 
        stage('Build') {
     steps {
-        dir('my-backend-app') {
+        dir('main') {
             bat 'mvn clean compile'
         }
     }
